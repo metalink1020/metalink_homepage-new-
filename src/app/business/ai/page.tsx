@@ -47,37 +47,37 @@ export default function BusinessAIPage() {
                   icon: PhoneCall,
                   role: "전화 상담 자동화",
                   title: "AI 콜봇",
-                  desc: "STT·LLM·TTS로 고객 전화를 사람처럼 응대하고 스마트 콜백까지 지원합니다.",
+                  desc: "STT·LLM·TTS로 고객 전화를 사람처럼 응대·콜백합니다.",
                 },
                 {
                   icon: MessagesSquare,
                   role: "옴니채널 상담",
                   title: "AI 챗봇",
-                  desc: "카카오·웹·톡톡을 하나로 묶어 24시간 다국어로 정확하게 답합니다.",
+                  desc: "카카오·웹·톡톡을 묶어 24시간 다국어로 응대합니다.",
                 },
                 {
                   icon: Headset,
                   role: "구독형 컨택센터",
                   title: "클라우드형 IPCC",
-                  desc: "IVR·녹취·호분배를 구축 없이 구독형으로 쓰는 클라우드 컨택센터입니다.",
+                  desc: "구축 없이 구독형으로 쓰는 클라우드 컨택센터입니다.",
                 },
                 {
                   icon: BrainCircuit,
                   role: "자율형 업무 에이전트",
                   title: "AI Agent",
-                  desc: "사내 시스템과 연동해 스스로 계획·실행하는 자율형 업무 에이전트입니다.",
+                  desc: "사내 시스템과 연동해 스스로 실행하는 자율형 에이전트입니다.",
                 },
                 {
                   icon: ShieldCheck,
                   role: "AI 거버넌스",
                   title: "AI GRC",
-                  desc: "AI 입력·응답과 도구 실행을 실시간 통제·감사하는 AI 거버넌스입니다.",
+                  desc: "AI 입력·응답·도구 실행을 실시간 통제·감사합니다.",
                 },
                 {
                   icon: Database,
                   role: "프라이빗 생성형 AI",
                   title: "RAG/LLM",
-                  desc: "사내 데이터를 근거로 답하는 설치형 프라이빗 생성형 AI입니다.",
+                  desc: "사내 데이터를 근거로 답하는 설치형 프라이빗 AI입니다.",
                 },
               ]}
             />

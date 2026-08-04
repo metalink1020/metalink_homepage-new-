@@ -39,17 +39,17 @@ export default function BusinessETCPage() {
                 {
                   icon: MessageSquareText,
                   title: "문자",
-                  desc: "SMS·LMS·MMS 기업 메시징을 합리적인 단가로 안정적으로 발송합니다.",
+                  desc: "SMS·LMS·MMS 기업 메시징을 합리적 단가로 안정 발송합니다.",
                 },
                 {
                   icon: CreditCard,
                   title: "PG / VAN",
-                  desc: "온·오프라인 카드 결제와 VAN 서비스를 안전하게 연계·정산합니다.",
+                  desc: "온·오프라인 카드결제와 VAN을 안전하게 연계·정산합니다.",
                 },
                 {
                   icon: Cloud,
                   title: "클라우드",
-                  desc: "클라우드 인프라의 설계·구축·운영으로 안정적인 서비스 환경을 만듭니다.",
+                  desc: "클라우드 인프라의 설계·구축·운영을 안정적으로 지원합니다.",
                 },
               ]}
             />
