@@ -19,6 +19,7 @@ const NAV_ITEMS: NavItem[] = [
     submenu: [
       { label: "메타링크", href: "/company/about" },
       { label: "CEO 소개", href: "/company/ceo" },
+      { label: "임직원 소개", href: "/company/team" },
     ],
   },
   {

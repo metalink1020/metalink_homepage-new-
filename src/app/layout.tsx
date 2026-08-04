@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
           precedence="default"
         />
         <Header />

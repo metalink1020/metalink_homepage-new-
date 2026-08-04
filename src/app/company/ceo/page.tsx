@@ -13,7 +13,7 @@ const PARAGRAPHS = [
   "메타링크는 사람과 기술을 잇는 AI·IT·마케팅 전문기업입니다. 우리는 시스템을 만드는 회사가 아니라, 기술을 통해 사람의 일과 기업의 성과를 변화시키는 파트너를 지향합니다. 최신 기술을 앞세우기보다 왜 필요한지, 누구를 위한 기술인지를 먼저 묻고, 사람이 실제로 체감하는 변화를 기술의 기준으로 삼습니다.",
   "이 기준 위에서 메타링크는 AI 콜봇·챗봇과 클라우드형 IPCC, 사내 데이터를 안전하게 활용하는 RAG/LLM, AI를 신뢰할 수 있게 통제·운영하는 AI 거버넌스(GRC)까지, 고객 접점과 업무 현장을 지능적으로 자동화하는 AI 솔루션을 제공합니다.",
   "기술과 마케팅을 분리하지 않는 것도 메타링크의 방식입니다. IT 시스템 구축·운영(SI/SM), 홈페이지·블로그·쇼핑몰 구축, SEO·AEO·GEO 기반의 통합 디지털 마케팅을 하나의 흐름으로 연결해 시스템과 콘텐츠, 운영과 성과가 끊기지 않도록 설계합니다.",
-  "이미 118곳의 고객사가 메타링크를 선택했고, AI 경영시스템 국제표준(ISO/IEC 42001) 인증과 국방·공공 분야의 수행 경험, 카카오엔터프라이즈·네이버클라우드·AWS 등과의 협력, 고려대학교·한성대학교와의 산학협력을 통해 기술과 신뢰를 함께 쌓아가고 있습니다.",
+  "이미 다수의 고객사가 메타링크를 선택했고, AI 경영시스템 국제표준(ISO/IEC 42001) 인증과 국방·공공 분야의 수행 경험, 카카오엔터프라이즈·네이버클라우드·AWS 등과의 협력, 고려대학교·한성대학교와의 산학협력을 통해 기술과 신뢰를 함께 쌓아가고 있습니다.",
   "기술은 계속 진화하지만, 그 기술을 사용하는 주체는 언제나 사람입니다. 메타링크는 사람과 기술, 비즈니스와 미래를 잇는 AI·IT·마케팅 파트너로서 고객의 성장에 끝까지 함께하겠습니다.",
   "감사합니다.",
 ];
@@ -55,19 +55,16 @@ export default function CeoPage() {
               ))}
             </div>
 
-            <div className="mt-12 flex items-end gap-4">
-              <span className="text-[15px] text-[#666]">
-                주식회사 메타링크 대표이사
-              </span>
+            <div className="mt-12">
               <span
-                style={{
-                  fontFamily: "'Nanum Pen Script', cursive",
-                  transform: "rotate(-4deg)",
-                }}
-                className="inline-block text-[54px] leading-none text-[#222]"
+                style={{ fontFamily: "'Alex Brush', cursive" }}
+                className="block text-[56px] leading-none text-[#222] md:text-[64px]"
               >
-                연정욱
+                Jeongwook Yeon
               </span>
+              <p className="mt-3 text-[15px] text-[#666]">
+                연정욱 <span className="text-[#CCC]">·</span> 주식회사 메타링크 대표이사
+              </p>
             </div>
           </div>
 
