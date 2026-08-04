@@ -83,7 +83,7 @@ const MEMBERS: Member[] = [
     photo: "/images/team/seo-haeri.jpg",
     career: [
       "美 상담심리학 석사 / 전문 코칭 자격 보유",
-      "前) 유학 컨설팅 기관 운영 총괄 (고객 컨설팅·네트워킹)",
+      "前) 유학 컨설팅 기관 운영 총괄",
       "現) 메타링크 SMB사업본부 마케팅팀 팀장",
     ],
   },
