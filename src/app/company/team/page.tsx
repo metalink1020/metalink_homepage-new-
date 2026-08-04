@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { User } from "lucide-react";
 import { SubPageHero } from "@/components/subpages/SubPageHero";
 import { SectionTitle } from "@/components/subpages/SectionTitle";
 import { InquiryCTA } from "@/components/subpages/InquiryCTA";
@@ -7,7 +6,7 @@ import { InquiryCTA } from "@/components/subpages/InquiryCTA";
 export const metadata: Metadata = {
   title: "임직원 소개 | 주식회사 메타링크",
   description:
-    "사람과 기술을 잇는 메타링크의 사람들. 대표이사 연정욱과 SMB사업본부 임직원을 소개합니다.",
+    "기술과 사람을 잇는 메타링크의 사람들. 대표이사 연정욱과 SMB사업본부 임직원을 소개합니다.",
 };
 
 interface Member {
@@ -33,10 +32,10 @@ const MEMBERS: Member[] = [
     ],
   },
   {
-    label: "AI",
+    label: "AI BUSINESS",
     dept: "SMB사업본부",
     name: "김현석",
-    title: "이사 · AI사업본부 본부장",
+    title: "본부장",
     photo: "/images/team/kim-hyeonseok.jpg",
     career: [
       "前) 리뉴메디칼 마케팅 기획 총괄",
@@ -45,16 +44,16 @@ const MEMBERS: Member[] = [
     ],
   },
   {
-    label: "SUPPORT",
-    dept: "SMB사업본부 · 설치지원팀",
+    label: "DEVELOPER",
+    dept: "SMB사업본부 설치지원팀",
     name: "김진배",
     title: "팀장",
     photo: "/images/team/kim-jinbae.jpg",
     career: ["現) 메타링크 설치지원팀 팀장"],
   },
   {
-    label: "SALES",
-    dept: "SMB사업본부 · 영업지원팀",
+    label: "SALES SUPPORT",
+    dept: "SMB사업본부 영업지원팀",
     name: "이봄",
     title: "팀장",
     photo: "/images/team/lee-bom.jpg",
@@ -66,7 +65,7 @@ const MEMBERS: Member[] = [
   },
   {
     label: "OPERATION",
-    dept: "SMB사업본부 · 운영지원팀",
+    dept: "SMB사업본부 운영지원팀",
     name: "이한나",
     title: "팀장",
     photo: "/images/team/lee-hanna.jpg",
@@ -78,14 +77,13 @@ const MEMBERS: Member[] = [
   },
   {
     label: "MARKETING",
-    dept: "SMB사업본부 · 마케팅팀",
+    dept: "SMB사업본부 마케팅팀",
     name: "서해리",
     title: "팀장",
     photo: "/images/team/seo-haeri.jpg",
     career: [
       "美 상담심리학 석사 / 전문 코칭 자격 보유",
       "前) 유학 컨설팅 기관 운영 총괄 (고객 컨설팅·네트워킹)",
-      "前) 비즈니스 운영 프로세스 기획 및 조직·인사 관리",
       "現) 메타링크 마케팅팀 팀장",
     ],
   },
@@ -93,28 +91,22 @@ const MEMBERS: Member[] = [
 
 function TeamCard({ member }: { member: Member }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border border-[#EBEBEB] bg-white">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-[#EBEBEB] bg-white">
       {/* 사진 영역 */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-b from-[#EEF2FB] to-[#DEE6F5]">
-        {/* 세로 부서 라벨 */}
+      <div className="relative aspect-[4/5] overflow-hidden bg-white">
+        {/* 인물 사진: 기본 흑백 → 호버 시 컬러 */}
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat grayscale transition-[filter] duration-500 ease-out group-hover:grayscale-0"
+          style={{ backgroundImage: `url('${member.photo}')` }}
+        />
+        {/* 세로 영문 역할 라벨 */}
         <span
           aria-hidden
-          className="absolute left-3 top-4 select-none font-bold uppercase leading-none tracking-[3px] text-brand/15 [writing-mode:vertical-rl] md:left-4 md:top-5 md:text-[38px]"
-          style={{ fontSize: "28px" }}
+          className="pointer-events-none absolute left-3 top-4 z-10 select-none font-bold uppercase leading-none tracking-[2px] text-brand/25 [writing-mode:vertical-rl] md:left-4 md:top-5 md:text-[34px]"
+          style={{ fontSize: "24px" }}
         >
           {member.label}
         </span>
-        {/* 플레이스홀더(사진 없을 때) */}
-        <User
-          aria-hidden
-          className="absolute left-1/2 top-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 text-[#C7CEDA]"
-          strokeWidth={1.2}
-        />
-        {/* 실제 사진 (있으면 위에 덮임) */}
-        <div
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat"
-          style={{ backgroundImage: `url('${member.photo}')` }}
-        />
       </div>
 
       {/* 정보 영역 */}
@@ -149,7 +141,7 @@ export default function TeamPage() {
     <>
       <SubPageHero
         title="Our People"
-        description="사람과 기술을 잇는 힘, 메타링크의 사람들을 소개합니다."
+        description="기술과 사람을 잇는 힘, 메타링크의 사람들을 소개합니다."
         bgImage="/images/subpages/svisual-about.jpg"
       />
 

@@ -10,7 +10,7 @@ import { AwardsCarousel } from "./AwardsCarousel";
 export const metadata: Metadata = {
   title: "회사소개 | 주식회사 메타링크",
   description:
-    "메타링크는 사람과 기술을 잇는 IT·마케팅 전문기업입니다. AI 채팅봇·음성봇, 클라우드형 IPCC, RAG/LLM 기반 생성형 AI, 기업 메시징과 IT SI/SM·디지털 마케팅까지 하나의 흐름으로 연결합니다.",
+    "메타링크는 기술과 사람을 잇는 IT·마케팅 전문기업입니다. AI 채팅봇·음성봇, 클라우드형 IPCC, RAG/LLM 기반 생성형 AI, 기업 메시징과 IT SI/SM·디지털 마케팅까지 하나의 흐름으로 연결합니다.",
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
     <>
       <SubPageHero
         title={"Your Innovative\nAI Partner"}
-        description={"사람과 기술을 잇고, 성과로 증명하는 AI·IT·마케팅 전문기업입니다."}
+        description={"기술과 사람을 잇고, 성과로 증명하는 AI·IT·마케팅 전문기업입니다."}
         bgImage="/images/subpages/svisual-about.jpg"
       />
 
