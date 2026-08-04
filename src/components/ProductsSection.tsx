@@ -23,7 +23,7 @@ const PRODUCT_CARDS: ProductCardData[] = [
   },
   {
     name: "지속 파트너십",
-    lines: ["구축으로 끝내지 않고 24시간 운영·고도화까지", "성과를 함께 키우는 장기 파트너"],
+    lines: ["구축에서 끝내지 않고 운영·고도화까지", "성과를 함께 키우는 장기 파트너"],
     href: "/company/about",
   },
 ];
@@ -115,7 +115,7 @@ export default function ProductsSection() {
     <section className="mx-auto mt-[120px] mb-[150px] max-w-[1400px] px-6 xl:mt-[160px] xl:mb-[200px]">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[300px_1fr] lg:gap-12">
         <div className="lg:sticky lg:top-[150px] lg:self-start">
-          <h2 className="text-2xl font-bold leading-tight text-foreground lg:text-[30px] xl:text-[35px]">
+          <h2 className="text-2xl font-bold leading-tight text-foreground md:text-[28px] lg:text-[30px] xl:text-[35px]">
             기술보다 먼저,
             <br />
             사람과 성과를 생각합니다.

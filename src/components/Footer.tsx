@@ -92,9 +92,9 @@ export default function Footer() {
               <p className="text-sm font-bold text-white">
                 주식회사 메타링크
               </p>
-              <div className="flex flex-wrap divide-x divide-white/40 text-sm text-[#F2F2F2]/60">
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-[#F2F2F2]/60">
                 {ADDRESS_ITEMS.map((item) => (
-                  <span key={item} className="px-2 first:pl-0">
+                  <span key={item} className="whitespace-nowrap">
                     {item}
                   </span>
                 ))}

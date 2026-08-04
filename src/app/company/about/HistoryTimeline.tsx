@@ -69,11 +69,11 @@ function YearGroup({ entry }: { entry: YearEntry }) {
       {entry.months.map((m, mi) => (
         <div key={m.month} className="relative flex items-start py-6 first:pt-0">
           {/* 좌: 연도 라벨 (해당 연도 첫 월에만) */}
-          <div className="w-[64px] shrink-0 pr-4 text-right md:w-[150px] md:pr-10">
+          <div className="w-[64px] shrink-0 pr-4 text-right lg:w-[150px] lg:pr-10">
             {mi === 0 && (
               <span
                 className={cn(
-                  "text-[26px] font-black leading-none transition-colors duration-300 md:text-[40px]",
+                  "text-[26px] font-black leading-none transition-colors duration-300 lg:text-[40px]",
                   active ? "text-[#1640DB]" : "text-[#222]"
                 )}
               >
@@ -84,7 +84,7 @@ function YearGroup({ entry }: { entry: YearEntry }) {
 
           {/* 세로선 위의 원형 마커 (해당 연도 첫 월에만) */}
           {mi === 0 && (
-            <span className="absolute left-[64px] top-[4px] -translate-x-1/2 md:left-[150px] md:top-[8px]">
+            <span className="absolute left-[64px] top-[4px] -translate-x-1/2 lg:left-[150px] lg:top-[8px]">
               <span
                 className={cn(
                   "block h-[14px] w-[14px] rounded-full border-2 transition-colors duration-300",
@@ -97,7 +97,7 @@ function YearGroup({ entry }: { entry: YearEntry }) {
           )}
 
           {/* 우: 월 + 이벤트 */}
-          <div className="flex flex-1 gap-5 pl-8 md:gap-8 md:pl-14">
+          <div className="flex flex-1 gap-5 pl-8 lg:gap-8 lg:pl-14">
             <span className="w-7 shrink-0 text-base font-bold text-[#222] md:text-lg">
               {m.month}
             </span>
@@ -131,8 +131,8 @@ export function HistoryTimeline() {
         aria-hidden
         className="pointer-events-none object-cover opacity-40"
       />
-      <div className="relative mx-auto flex max-w-[1200px] flex-col gap-10 px-5 md:flex-row md:gap-20 md:px-10">
-        <div className="md:sticky md:top-[150px] md:h-fit md:w-[300px] md:self-start">
+      <div className="relative mx-auto flex max-w-[1200px] flex-col gap-10 px-5 md:px-10 lg:flex-row lg:gap-20">
+        <div className="lg:sticky lg:top-[150px] lg:h-fit lg:w-[300px] lg:self-start">
           <h2 className="text-3xl font-bold leading-[1.4] text-[#222] md:text-[40px]">
             메타링크가
             <br />
@@ -143,7 +143,7 @@ export function HistoryTimeline() {
         {/* 타임라인 (중앙 세로선) */}
         <div className="relative min-w-0 flex-1">
           <div
-            className="absolute left-[64px] top-2 bottom-2 w-px bg-[#D5DAE3] md:left-[150px]"
+            className="absolute left-[64px] top-2 bottom-2 w-px bg-[#D5DAE3] lg:left-[150px]"
             aria-hidden
           />
           {HISTORY.map((entry) => (

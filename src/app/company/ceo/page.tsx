@@ -69,7 +69,7 @@ export default function CeoPage() {
           </div>
 
           {/* 우: 사진 + 약력 */}
-          <div>
+          <div className="mx-auto w-full max-w-[420px] lg:max-w-none">
             {/* 대표 사진 */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[#EBEBEB] bg-[#F7F8FC]">
               <Image

@@ -46,9 +46,9 @@ function Counter({ stat }: { stat: StatItem }) {
   }, []);
 
   return (
-    <div ref={ref} className="w-1/2 md:w-1/4">
+    <div ref={ref} className="w-1/2 lg:w-1/4">
       <div className="flex items-end justify-center gap-[10px]">
-        <span className="text-[40px] font-bold leading-none tracking-[-2px] md:text-[60px]">
+        <span className="text-[40px] font-bold leading-none tracking-[-2px] md:text-[48px] lg:text-[60px]">
           {value.toLocaleString()}
         </span>
         <span className="pb-1 text-lg font-bold md:text-2xl">
@@ -70,7 +70,7 @@ export function StatsCounter({
   footnote?: string;
 }) {
   return (
-    <div className="bg-[#F7F8FC] py-20 text-center md:py-[100px]">
+    <div className="bg-[#F7F8FC] px-5 py-20 text-center md:py-[100px]">
       <p className="text-lg font-medium text-[#222] md:text-xl">
         {title.split("\n").map((line, i, arr) => (
           <span key={i}>
@@ -79,7 +79,7 @@ export function StatsCounter({
           </span>
         ))}
       </p>
-      <div className="mx-auto mt-10 flex max-w-[900px] flex-wrap justify-center gap-8 md:mt-[60px] md:gap-0">
+      <div className="mx-auto mt-10 flex max-w-[900px] flex-wrap justify-center gap-8 md:mt-[60px] lg:gap-0">
         {stats.map((stat) => (
           <Counter key={stat.label} stat={stat} />
         ))}

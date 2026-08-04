@@ -44,7 +44,7 @@ export default function AboutPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-[1200px] px-5 py-16 md:px-10 md:py-[100px]">
           <SectionTitle>핵심 사업 영역</SectionTitle>
-          <div className="mt-[60px] flex flex-wrap justify-center gap-x-10 gap-y-14 md:gap-x-[70px]">
+          <div className="mt-[60px] grid grid-cols-2 justify-items-center gap-x-10 gap-y-14 md:gap-x-[70px] lg:grid-cols-4">
             {[
               {
                 Icon: BrainCircuit,
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 lines: ["문자·PG/VAN·클라우드", "비즈니스 인프라 연결"],
               },
             ].map(({ Icon, title, lines }) => (
-              <div key={title} className="w-[200px] text-center">
+              <div key={title} className="w-full max-w-[200px] text-center">
                 <Icon className="mx-auto h-14 w-14 text-brand" strokeWidth={1.5} />
                 <h3 className="relative mt-6 pb-4 text-xl font-bold text-[#222] after:absolute after:bottom-0 after:left-1/2 after:block after:h-px after:w-[24px] after:-translate-x-1/2 after:bg-[#222]">
                   {title}

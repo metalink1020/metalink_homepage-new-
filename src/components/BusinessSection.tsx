@@ -173,8 +173,8 @@ export default function BusinessSection() {
         })}
       </div>
 
-      {/* Mobile / tablet: stacked, no hover-accordion */}
-      <div className="flex flex-col lg:hidden">
+      {/* Mobile / tablet: stacked (mobile) → 2-column grid (tablet), no hover-accordion */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:hidden">
         {PANELS.map((panel) => (
           <a
             key={panel.href}
