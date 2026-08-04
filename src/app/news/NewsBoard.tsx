@@ -44,36 +44,36 @@ export default function NewsBoard() {
       </div>
 
       {/* 검색 */}
-      <div className="mb-5 flex justify-end">
-        <div className="flex items-center gap-2.5">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") setApplied(query.trim());
-            }}
-            placeholder="검색어를 입력하세요."
-            className="h-[50px] w-[380px] max-w-full rounded-[5px] border border-[#EBEBEB] px-4 text-sm outline-none focus:border-brand"
-          />
-          <button
-            type="button"
-            onClick={() => setApplied(query.trim())}
-            className="h-[50px] w-[100px] shrink-0 rounded-[5px] bg-[#222] font-bold text-white"
-          >
-            검색
-          </button>
-        </div>
+      <div className="mb-5 flex items-center gap-2.5 md:justify-end">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") setApplied(query.trim());
+          }}
+          placeholder="검색어를 입력하세요."
+          className="h-[50px] min-w-0 flex-1 rounded-[5px] border border-[#EBEBEB] px-4 text-sm outline-none focus:border-brand md:w-[380px] md:flex-none"
+        />
+        <button
+          type="button"
+          onClick={() => setApplied(query.trim())}
+          className="h-[50px] w-[80px] shrink-0 rounded-[5px] bg-[#222] font-bold text-white md:w-[100px]"
+        >
+          검색
+        </button>
       </div>
 
       {/* 목록 */}
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[600px] border-t-2 border-[#222] text-center">
+        <table className="w-full border-t-2 border-[#222] text-center">
           <thead>
             <tr className="h-[60px] border-b border-[#EBEBEB]">
-              <th className="w-[100px] font-medium text-[#222]">NO.</th>
+              <th className="w-[52px] font-medium text-[#222] md:w-[100px]">NO.</th>
               <th className="text-left font-medium text-[#222]">제목</th>
-              <th className="w-[160px] font-medium text-[#222]">작성일</th>
+              <th className="hidden w-[160px] font-medium text-[#222] md:table-cell">
+                작성일
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -98,18 +98,21 @@ export default function NewsBoard() {
                       <span className="text-[#666]">{item.no}</span>
                     )}
                   </td>
-                  <td className="text-left">
+                  <td className="py-3 text-left">
                     <a
                       href="#"
-                      className="inline-flex items-center gap-2 text-[#222] hover:text-brand hover:underline"
+                      className="flex flex-wrap items-center gap-2 text-[#222] hover:text-brand"
                     >
-                      <span>{item.title}</span>
+                      <span className="hover:underline">{item.title}</span>
                       <span className="shrink-0 rounded-full bg-[#F7F8FC] px-2 py-0.5 text-xs font-semibold text-brand">
                         {item.tag}
                       </span>
                     </a>
+                    <span className="mt-1 block text-xs text-[#999] md:hidden">
+                      {item.date}
+                    </span>
                   </td>
-                  <td className="text-[#666]">{item.date}</td>
+                  <td className="hidden text-[#666] md:table-cell">{item.date}</td>
                 </tr>
               ))
             )}
