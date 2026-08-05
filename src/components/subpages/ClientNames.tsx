@@ -16,7 +16,7 @@ const LOGO_MAP: Record<string, string> = {
   // 협력사 (공식 로고)
   "AWS코리아": "/images/clients/aws.png",
   "스마트로": "/images/clients/smartro.png",
-  "고려대학교": "/images/clients/korea-univ.png",
+  "고려대학교": "/images/clients/korea-university.png",
   "한성대학교": "/images/clients/hansung-univ.png",
   "베스핀글로벌": "/images/clients/bespin-global.png",
   // 고객사 (공식 로고)

@@ -18,7 +18,7 @@ const PARTNERS: Partner[] = [
   { id: "aws", name: "AWS", src: "/images/clients/aws.png" },
   { id: "bespin-global", name: "Bespin Global", src: "/images/clients/bespin-global.png" },
   { id: "smartro", name: "Smartro", src: "/images/clients/smartro.png" },
-  { id: "korea-univ", name: "고려대학교", src: "/images/clients/korea-univ.png" },
+  { id: "korea-univ", name: "고려대학교", src: "/images/clients/korea-university.png" },
   { id: "hansung-univ", name: "한성대학교", src: "/images/clients/hansung-univ.png" },
   { id: "certilife", name: "CertiLife", src: "/images/partners-mt/certilife.png" },
   { id: "dentium", name: "Dentium", src: "/images/clients/dentium.png" },

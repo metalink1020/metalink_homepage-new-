@@ -63,9 +63,9 @@ export default function CeoPage() {
           </div>
 
           {/* 우: 사진 + 약력 */}
-          <div className="mx-auto w-full max-w-[420px] lg:max-w-none">
+          <div className="mx-auto flex w-full max-w-[420px] flex-col lg:h-full lg:max-w-none">
             {/* 대표 사진 */}
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[#EBEBEB] bg-[#F7F8FC]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[#EBEBEB] bg-[#F7F8FC] lg:aspect-auto lg:min-h-[420px] lg:flex-1">
               <Image
                 src="/images/ceo.jpg"
                 alt="메타링크 대표이사 연정욱"
