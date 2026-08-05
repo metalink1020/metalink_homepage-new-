@@ -56,14 +56,8 @@ export default function CeoPage() {
             </div>
 
             <div className="mt-12">
-              <span
-                style={{ fontFamily: "'Alex Brush', cursive" }}
-                className="block text-[56px] leading-none text-[#222] md:text-[64px]"
-              >
-                Jeongwook Yeon
-              </span>
-              <p className="mt-3 text-[15px] text-[#666]">
-                연정욱 <span className="text-[#CCC]">·</span> 주식회사 메타링크 대표이사
+              <p className="text-base text-[#222] md:text-lg">
+                주식회사 메타링크 <span className="font-bold">연정욱</span> 대표이사
               </p>
             </div>
           </div>

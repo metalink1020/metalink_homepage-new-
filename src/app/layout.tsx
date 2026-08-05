@@ -36,11 +36,6 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
-          precedence="default"
-        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
