@@ -34,6 +34,7 @@ const LOGO_MAP: Record<string, string> = {
   "기계설비건설공제조합": "/images/clients/seolbi.png",
   "한국국방획득혁신학회": "/images/clients/ideas-k.png",
   "경상북도치과의사회": "/images/clients/gb-dental.png",
+  "인천광역시": "/images/clients/incheon.png",
 };
 
 export function ClientNames({

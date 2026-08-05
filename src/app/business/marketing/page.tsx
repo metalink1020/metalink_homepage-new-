@@ -166,7 +166,7 @@ export default function BusinessMarketingPage() {
           <SectionTitle>주요 고객사</SectionTitle>
           <div className="mt-[60px]">
             <ClientNames
-              names={["한국국방획득혁신학회", "경상북도치과의사회"]}
+              names={["인천광역시", "한국국방획득혁신학회", "경상북도치과의사회"]}
             />
           </div>
         </div>
