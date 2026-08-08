@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <radialGradient id="g" cx="62%" cy="42%" r="60%">
+      <stop offset="0" stop-color="#2f6fbf" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2f6fbf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="360" cy="250" r="240" fill="url(#g)"/>
+  <!-- link edges -->
+  <g stroke="#5b93d6" stroke-width="1.4" opacity=".5">
+    <path d="M360 250 L180 140"/>
+    <path d="M360 250 L500 150"/>
+    <path d="M360 250 L520 330"/>
+    <path d="M360 250 L300 430"/>
+    <path d="M360 250 L150 320"/>
+    <path d="M180 140 L150 320"/>
+    <path d="M500 150 L520 330"/>
+    <path d="M520 330 L300 430"/>
+    <path d="M150 320 L300 430"/>
+  </g>
+  <!-- central ring node (echoes the logo mark) -->
+  <circle cx="360" cy="250" r="46" stroke="#7fb0e6" stroke-width="6" opacity=".95"/>
+  <circle cx="360" cy="250" r="46" fill="#0b1a2e"/>
+  <circle cx="360" cy="250" r="46" stroke="#8fbdf0" stroke-width="6"/>
+  <!-- satellite nodes -->
+  <g fill="#0b1a2e" stroke="#6ea3de" stroke-width="3">
+    <circle cx="180" cy="140" r="16"/>
+    <circle cx="500" cy="150" r="13"/>
+    <circle cx="520" cy="330" r="18"/>
+    <circle cx="300" cy="430" r="14"/>
+    <circle cx="150" cy="320" r="11"/>
+  </g>
+  <g fill="#8fbdf0">
+    <circle cx="180" cy="140" r="4"/>
+    <circle cx="500" cy="150" r="3.5"/>
+    <circle cx="520" cy="330" r="4.5"/>
+    <circle cx="300" cy="430" r="4"/>
+    <circle cx="150" cy="320" r="3"/>
+  </g>
+</svg>

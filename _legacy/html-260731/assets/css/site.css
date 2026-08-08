@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* ==========================================================================
+   METALINK — minimal overrides on top of the bonanza authored CSS foundation
+   (default/font/styles/reactive/slick/clone-extra). Only Metalink-specific
+   bits live here: logo tint, hero background (no banner image), the two native
+   sections bonanza lacks (News, Contact), the CEO band, and text marquee items.
+   Brand token reused from bonanza: #1640db.
+   ========================================================================== */
+
+/* ---- Logo: use the real Metalink mark (color on white, white over hero) ---- */
+.header .logo .htop_logo{filter:brightness(0) invert(1)}
+.header .logo img{height:34px}
+.footer .fcon_btm > img{max-width:190px;height:auto;padding-bottom:18px;filter:brightness(0) invert(1)}
+
+/* ---- Hero (section1) : Metalink has no banner photo → crafted dark field ---- */
+.main_container .section1{background:#0a1526}
+.main_container .section1 .mvisual .mv{height:calc(var(--vh,1vh) * 100)}
+.main_container .section1 .mvisual .mv .mv_bg{position:absolute;inset:0;
+  background:
+    radial-gradient(1100px 620px at 76% 40%,rgba(47,111,191,.42),transparent 60%),
+    linear-gradient(180deg,#0a1526 0%,#0d2138 60%,#0a1526 100%)}
+.main_container .section1 .mvisual .mv .mv_bg::after{content:"";position:absolute;right:-4%;top:50%;transform:translateY(-50%);
+  width:min(52vw,720px);aspect-ratio:1;background:url('/pub/images/mt_hero_motif.svg') no-repeat center/contain;opacity:.9}
+.main_container .section1 .mv_txt .eyebrow{display:inline-flex;align-items:center;gap:12px;color:#5b93d6;
+  font-weight:700;letter-spacing:.2em;font-size:13px;text-transform:uppercase;margin-bottom:22px}
+.main_container .section1 .mv_txt .eyebrow::before{content:"";width:30px;height:1.5px;background:#5b93d6}
+.main_container .section1 .mv_txt .sub{display:block;color:rgba(233,240,250,.72);font-size:19px;line-height:1.7;
+  font-weight:400;margin-top:6px;max-width:620px}
+.main_container .section1 .scroll-hint{position:absolute;left:50px;bottom:36px;z-index:2;color:rgba(255,255,255,.5);
+  font-size:11px;letter-spacing:.24em;font-weight:600;writing-mode:vertical-rl}
+.main_container .section1 .scroll-hint::after{content:"";display:block;width:1px;height:42px;margin:12px auto 0;
+  background:linear-gradient(rgba(255,255,255,.55),transparent);animation:mt-sd 1.9s ease-in-out infinite}
+@keyframes mt-sd{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* Korean-friendly card title (bonanza used Poppins for latin product names) */
+.main_container .section2 .con_right .mv .tt{font-family:'Pretendard','Poppins',sans-serif;letter-spacing:-.02em}
+
+/* ---- CEO band (bonanza has none) : same tokens ---- */
+.mt-ceo{background:#0a1526;padding:0 0 120px}
+.mt-ceo .inner{max-width:1400px;margin:0 auto;padding:0 50px}
+.mt-ceo .ceo-card{display:flex;align-items:center;gap:34px;background:linear-gradient(120deg,#0f2338,#0a1526);
+  border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:46px 48px;color:#fff}
+.mt-ceo .ceo-card .badge{flex:0 0 auto;width:60px;height:60px;border-radius:15px;background:#1640db;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.mt-ceo .ceo-card h3{font-size:22px;font-weight:700}
+.mt-ceo .ceo-card h3 span{font-size:15px;font-weight:400;color:#5b93d6;margin-left:10px}
+.mt-ceo .ceo-card p{color:rgba(233,240,250,.76);font-size:16px;margin-top:10px;max-width:840px;line-height:1.7}
+.mt-ceo .ceo-card .more{margin-left:auto;flex:0 0 auto;font-weight:700;color:#5b93d6;white-space:nowrap}
+
+/* ---- Partner marquee : real BI/CI logo wall (grayscale → color on hover) ---- */
+.main_container .section4 .marquee li{width:auto;height:82px;display:flex;align-items:center;justify-content:center;
+  padding:0 42px;margin:0 8px;border:1px solid #ebebeb;border-radius:14px;background:#fff}
+.main_container .section4 .marquee li img{height:34px;width:auto;max-width:168px;object-fit:contain;
+  filter:grayscale(1);opacity:.62;transition:.25s linear}
+.main_container .section4 .marquee li:hover img{filter:none;opacity:1}
+
+/* ---- Section3 business columns : original per-business panels ---- */
+.main_container .section3 .business_area li:nth-child(1){background-image:url('/pub/images/biz-ai.svg')}
+.main_container .section3 .business_area li:nth-child(2){background-image:url('/pub/images/biz-si.svg')}
+.main_container .section3 .business_area li:nth-child(3){background-image:url('/pub/images/biz-mkt.svg')}
+.main_container .section3 .business_area li:nth-child(4){background-image:url('/pub/images/biz-etc.svg')}
+
+/* ---- News section (native, bonanza tokens) ---- */
+.mt-news{padding:150px 0;background:#f7faff}
+.mt-news .inner{max-width:1400px;margin:0 auto;padding:0 50px}
+.mt-news .m_head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:50px}
+.mt-news .m_head .lb{color:#1640db;font-weight:700;letter-spacing:.16em;font-size:14px;margin-bottom:14px;display:block}
+.mt-news .m_head .m_title{font-size:38px;font-weight:700;line-height:1.3;color:#222}
+.mt-news .m_head p{color:#666;font-size:16px;max-width:420px}
+.mt-news ul{border-top:2px solid #222}
+.mt-news li a{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:32px 8px;
+  border-bottom:1px solid #ebebeb;transition:.25s linear}
+.mt-news li .date{color:#1640db;font-weight:700;font-size:15px}
+.mt-news li h3{font-size:20px;font-weight:600;color:#222}
+.mt-news li .tag{font-size:12px;font-weight:700;color:#1640db;background:#eaf1fe;padding:5px 12px;border-radius:100px}
+.mt-news li a:hover{background:#fff;padding-left:22px;border-radius:12px}
+.mt-news .more_btn{margin-top:34px}
+
+/* ---- Contact band (native, bonanza tokens) ---- */
+.mt-contact{padding:130px 0;background:linear-gradient(120deg,#0f2338,#0a1526);color:#fff;text-align:center}
+.mt-contact h2{font-size:42px;font-weight:800;line-height:1.32;letter-spacing:-.02em}
+.mt-contact p{color:rgba(233,240,250,.7);margin:18px 0 34px;font-size:18px}
+
+/* shared pill button in Metalink tone */
+.mt-btn{display:inline-flex;align-items:center;gap:9px;background:#1640db;color:#fff;font-weight:700;font-size:16px;
+  padding:16px 34px;border-radius:100px;transition:.22s linear}
+.mt-btn::after{content:"→"}
+.mt-btn:hover{background:#fff;color:#1640db;transform:translateY(-2px)}
+.mt-btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
+.mt-btn.ghost:hover{background:rgba(255,255,255,.1);color:#fff}
+.mt-btn.line{background:#fff;color:#1640db;border:1px solid #dbe6fb}
+
+/* ---- bonanza .svisual sub-hero : Korean title + subtitle ---- */
+.svisual .txt_box .title{font-family:'Pretendard','Poppins',sans-serif;letter-spacing:-.02em}
+.svisual .txt_box .txt{max-width:760px;margin:0 auto;opacity:.82;line-height:1.7}
+@media (max-width:767px){
+  .svisual{height:440px}
+  .svisual .txt_box .title{font-size:30px;line-height:1.3}
+}
+
+/* ================= Sub-page shell (bonanza tokens) ================= */
+.mt-subhero{position:relative;background:#0a1526;color:#fff;padding:200px 0 90px;overflow:hidden}
+.mt-subhero::after{content:"";position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:min(46vw,560px);aspect-ratio:1;
+  background:url('/pub/images/mt_hero_motif.svg') no-repeat center/contain;opacity:.5}
+.mt-subhero .inner{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:0 50px}
+.mt-subhero .bc{font-size:13px;color:rgba(233,240,250,.55);margin-bottom:18px}
+.mt-subhero .bc a:hover{color:#fff}
+.mt-subhero .lb{display:inline-block;color:#5b93d6;font-weight:700;letter-spacing:.16em;font-size:13px;margin-bottom:16px}
+.mt-subhero h1{font-size:48px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.mt-subhero .sub{margin-top:18px;max-width:700px;color:rgba(233,240,250,.72);font-size:18px;line-height:1.7}
+.mt-sec{padding:110px 0}
+.mt-sec .inner{max-width:1400px;margin:0 auto;padding:0 50px}
+.mt-sec.alt{background:#f7faff}
+.mt-lead{font-size:26px;font-weight:700;line-height:1.5;letter-spacing:-.02em;color:#222;margin-bottom:24px}
+.mt-prose p{color:#444;font-size:17px;line-height:1.85;margin-bottom:16px;max-width:900px}
+.mt-lb{color:#1640db;font-weight:700;letter-spacing:.14em;font-size:14px;margin-bottom:16px;display:block}
+.mt-h{font-size:34px;font-weight:700;letter-spacing:-.02em;color:#222;line-height:1.3}
+/* card grid */
+/* bonanza-style: centered, borderless — icon top, title, short divider, short text */
+.mt-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:44px 24px;margin-top:56px}
+.mt-card{position:relative;border:0;background:transparent;padding:8px 18px;text-align:center;transition:.28s linear}
+.mt-card:hover{transform:translateY(-6px)}
+.mt-card .ic{width:66px;height:66px;background:transparent;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.mt-card .ic svg{width:46px;height:46px;stroke:#1640db;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mt-card .role{display:none}
+.mt-card h3{font-size:21px;font-weight:700;color:#222;margin-bottom:0;letter-spacing:-.02em;line-height:1.4}
+.mt-card h3::after{content:"";display:block;width:30px;height:2px;background:#1640db;opacity:.85;margin:16px auto}
+.mt-card p{color:#555;font-size:16px;line-height:1.75;max-width:340px;margin:0 auto}
+/* Google Material Symbols (replaces the AI-looking custom icons) */
+.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 48;-webkit-font-smoothing:antialiased}
+.mt-card .ic .material-symbols-outlined{font-size:52px;color:#1640db}
+/* case cards */
+.mt-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:24px}
+.mt-case{border:1px solid #ebebeb;border-radius:16px;padding:26px 24px;background:#f7faff}
+.mt-case .cli{font-size:15px;font-weight:800;color:#222}
+.mt-case .prj{font-size:13px;color:#1640db;font-weight:600;margin:6px 0 10px}
+.mt-case p{font-size:13.5px;color:#666;line-height:1.65}
+/* svc groups */
+/* marketing service groups — alternating full-width white/gray bands (bonanza style) */
+.mt-group{margin:0}
+.mt-cat{display:block;text-align:center;font-size:26px;font-weight:800;color:#222;letter-spacing:-.02em}
+.mt-cat span{display:none}
+/* info table / bio / clients */
+.mt-table{margin-top:44px;border-top:2px solid #222}
+.mt-table .row{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:19px 6px;border-bottom:1px solid #ebebeb}
+.mt-table .row .k{font-weight:700;color:#222}
+.mt-table .row .v{color:#444}
+.mt-bio{margin-top:24px;border-top:1px solid #ebebeb}
+.mt-bio li{display:flex;gap:20px;padding:16px 4px;border-bottom:1px solid #ebebeb;color:#444;font-size:16px}
+.mt-bio li .yr{flex:0 0 70px;font-weight:700;color:#1640db}
+.mt-clients{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:44px}
+.mt-client{height:96px;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 18px;
+  border:1px solid #ebebeb;border-radius:14px;background:#fff;color:#666;font-size:16.5px;font-weight:700;transition:.22s linear}
+.mt-client:hover{border-color:#9dc0f2;color:#1640db;transform:translateY(-3px)}
+.mt-client img{max-height:38px;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.6;transition:.25s linear}
+.mt-client:hover img{filter:none;opacity:1}
+.mt-note{margin-top:16px;font-size:13px;color:#999}
+
+/* centered, trimmed sub-page intro (right under the svisual banner) */
+.mt-sec.mt-intro{text-align:center;padding-bottom:40px}
+.mt-sec.mt-intro .mt-lead{max-width:1000px;margin:0 auto;font-size:clamp(27px,3.3vw,40px);line-height:1.32;font-weight:700;color:#222}
+@media (max-width:767px){.mt-sec.mt-intro .mt-lead{font-size:23px}}
+/* CEO page */
+.mt-ceowrap{display:grid;grid-template-columns:330px 1fr;gap:56px;align-items:start}
+.mt-portrait{background:#0a1526;border-radius:20px;aspect-ratio:3/3.7;display:flex;align-items:flex-end;padding:32px;color:#fff;position:relative;overflow:hidden}
+.mt-portrait::after{content:"";position:absolute;right:-30%;top:-10%;width:120%;aspect-ratio:1;background:url('/pub/images/mt_hero_motif.svg') no-repeat center/contain;opacity:.4}
+.mt-portrait .nm{position:relative;z-index:1;font-size:25px;font-weight:800}
+.mt-portrait .nm span{display:block;font-size:14.5px;font-weight:400;color:#5b93d6;margin-top:6px}
+.mt-sign{margin-top:36px;font-size:15.5px;color:#666}
+.mt-sign b{color:#222;font-size:19px;margin-left:8px}
+/* contact page */
+.mt-cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.mt-cinfo .row{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid #ebebeb}
+.mt-cinfo .row .k{flex:0 0 116px;font-weight:700;color:#222}
+.mt-cinfo .row .v{color:#666}
+.mt-cinfo .row .v a{color:#1640db;font-weight:600}
+.mt-form{background:#fff;border:1px solid #ebebeb;border-radius:20px;padding:38px;box-shadow:0 24px 60px rgba(11,26,46,.06)}
+.mt-form label{display:block;font-size:13.5px;font-weight:600;margin:16px 0 7px;color:#222}
+.mt-form input,.mt-form select,.mt-form textarea{width:100%;border:1px solid #ebebeb;border-radius:11px;padding:13px 15px;font-size:15px;font-family:inherit;background:#f7faff}
+.mt-form input:focus,.mt-form select:focus,.mt-form textarea:focus{outline:none;border-color:#1640db;background:#fff}
+.mt-form textarea{min-height:128px;resize:vertical}
+.mt-form .agree{display:flex;align-items:center;gap:9px;margin-top:16px;font-size:13.5px;color:#666}
+.mt-form .agree input{width:auto}
+.mt-form .submit{width:100%;margin-top:22px;background:#1640db;color:#fff;font-weight:700;font-size:16px;padding:16px;border-radius:12px}
+.mt-map{margin-top:24px;border-radius:16px;border:1px solid #ebebeb;background:#f7faff;min-height:260px;display:flex;align-items:center;justify-content:center;color:#999;font-size:14.5px;text-align:center;padding:28px}
+.mt-dir{margin-top:22px}
+.mt-dir li{padding:8px 0;color:#444;position:relative;padding-left:18px}
+.mt-dir li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:50%;background:#1640db}
+.mt-tabs{display:flex;gap:9px;margin-top:38px}
+.mt-tabs button{padding:9px 20px;border:1px solid #ebebeb;border-radius:100px;font-size:13.5px;font-weight:600;color:#666}
+.mt-tabs button.on{background:#222;color:#fff;border-color:#222}
+
+/* tri (SEO/AEO/GEO style strip) */
+.mt-tri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.mt-tri .t{border:1px solid #ebebeb;border-radius:16px;padding:28px 26px;background:#fff}
+.mt-tri .t .code{font-family:'Poppins',monospace;font-weight:800;font-size:16px;color:#1640db;letter-spacing:.04em}
+.mt-tri .t h4{font-size:17px;font-weight:700;margin:10px 0 8px;color:#222}
+.mt-tri .t p{font-size:14px;color:#666;line-height:1.7}
+@media (max-width:767px){.mt-tri{grid-template-columns:1fr}}
+
+/* about-page achievement stats (bonanza "불가능을 가능으로" style) */
+.mt-stats-sec{text-align:center}
+.mt-stats-title{font-size:clamp(27px,3.3vw,40px);font-weight:800;line-height:1.34;color:#222;letter-spacing:-.02em}
+.mt-stats{margin-top:60px;text-align:left;background:#f7faff;border:1px solid #eef1f5;border-radius:24px;padding:56px 54px}
+.mt-stats-head .lb2{display:block;color:#1640db;font-weight:700;font-size:15px;letter-spacing:.02em}
+.mt-stats-head .hl{font-size:clamp(24px,2.6vw,34px);font-weight:800;color:#222;margin-top:8px;letter-spacing:-.02em}
+.mt-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:46px;border-top:1px solid #e3e8ef;padding-top:44px}
+.mt-stats-grid .st .ic{color:#1640db;font-size:30px}
+.mt-stats-grid .st .k{font-size:15px;color:#666;font-weight:600;margin:12px 0 8px}
+.mt-stats-grid .st .n{font-size:clamp(38px,4vw,54px);font-weight:800;color:#111;letter-spacing:-.03em;line-height:1}
+.mt-stats-grid .st .n em{font-size:19px;font-weight:700;font-style:normal;color:#444;margin-left:4px}
+.mt-stats-note{margin-top:24px;font-size:13px;color:#999;text-align:right}
+@media(max-width:767px){.mt-stats{padding:34px 24px}.mt-stats-grid{grid-template-columns:1fr 1fr;gap:28px 18px}}
+
+/* reveal helper for native sections */
+.mt-reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.mt-reveal.on{opacity:1;transform:none}
+
+@media (max-width:1024px){
+  .mt-ceowrap,.mt-cgrid{grid-template-columns:1fr;gap:30px}
+  .mt-portrait{aspect-ratio:16/10;max-width:420px}
+}
+@media (max-width:767px){
+  .main_container .section1 .mv_txt .sub{font-size:15px}
+  .main_container .section1 .scroll-hint{left:26px}
+  .mt-ceo .ceo-card{flex-direction:column;align-items:flex-start;gap:16px;padding:32px 24px}
+  .mt-ceo .ceo-card .more{margin-left:0}
+  .mt-news li a{grid-template-columns:1fr;gap:6px}
+  .mt-subhero{padding:150px 0 66px}
+  .mt-subhero h1{font-size:30px}
+  .mt-news,.mt-contact,.mt-sec{padding:80px 0}
+  .mt-cards{grid-template-columns:1fr}
+  .mt-table .row,.mt-cinfo .row{grid-template-columns:1fr;gap:4px}
+  .mt-contact h2{font-size:27px}
+  .mt-news .m_head .m_title{font-size:27px}
+}

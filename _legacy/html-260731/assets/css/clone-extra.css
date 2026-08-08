@@ -1,0 +1,33 @@
+/* Clone-only additions.
+   The original partner marquees moved via the kxbdMarquee jQuery plugin (top
+   scrolls left, bottom scrolls right). Each row is rendered with its logo set
+   duplicated, so a -50% translate loops seamlessly. */
+
+@keyframes bf-marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes bf-marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.main_container .section4 .marquee ul {
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+.main_container .section4 .marquee.top ul {
+  animation: bf-marquee-left 44s linear infinite;
+}
+.main_container .section4 .marquee.btm ul {
+  animation: bf-marquee-right 25s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .main_container .section4 .marquee.top ul { animation-duration: 26s; }
+  .main_container .section4 .marquee.btm ul { animation-duration: 16s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main_container .section4 .marquee ul { animation: none; }
+}
